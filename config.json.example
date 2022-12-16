@@ -1,0 +1,19 @@
+{
+	"server": {
+		"host": "localhost",
+		"port": 8080
+	},
+	"paths": {
+		"logs": "/var/log/node-web-smsd",
+		"incoming": "/var/spool/sms/incoming",
+		"outgoing": "/var/spool/sms/outgoing",
+		"sent": "/var/spool/sms/sent",
+		"checked": "/var/spool/sms/checked",
+		"failed": "/var/spool/sms/failed"
+	},
+	"authentication": {
+		"type": "simple",
+		"salt": "<Change This>",
+		"hash": "e03887033ea8494adf9c7f75bc66c149a3dc75dc49939762d30c61cb14e0adaf"
+	}
+}
