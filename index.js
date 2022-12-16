@@ -38,3 +38,5 @@ const server = http.createServer(requestListener);
 server.listen(config.server.port, config.server.host, () => {
   log.info(`Server is running on http://${config.server.host}:${config.server.port}`);
 });
+
+log.debug('Module Loaded');
