@@ -10,7 +10,12 @@
 		"outgoing": "/var/spool/sms/outgoing",
 		"sent": "/var/spool/sms/sent",
 		"checked": "/var/spool/sms/checked",
-		"failed": "/var/spool/sms/failed"
+		"failed": "/var/spool/sms/failed",
+		"cleanup": {
+			"enabled": true,
+			"ignoreFlagged": true,
+			"maxAge": 40320
+		}
 	},
 	"authentication": {
 		"type": "simple",
