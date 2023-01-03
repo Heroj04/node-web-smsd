@@ -1,4 +1,3 @@
-const http = require('http');
 const log = require('loglevel');
 const prefix = require('loglevel-plugin-prefix');
 const args = require('args');
@@ -13,6 +12,7 @@ args.options([
 const flags = args.parse(process.argv);
 
 // Set up the logger
+// NOTE - Config Module will log at info level unless logLevel flag is specified
 prefix.reg(log);
 prefix.apply(log, { template: '[%t] %l (%n):' });
 log.setLevel(flags.logLevel ?? log.levels.ERROR);
@@ -24,19 +24,7 @@ const config = require('./lib/config');
 log.getLogger('config').setLevel(flags.logLevel ?? config.logLevel);
 log.setLevel(flags.logLevel ?? config.logLevel);
 
-// Create a listener function
-function requestListener(req, res) {
-  log.debug('Request made', req);
-  res.writeHead(200);
-  res.end('My first server!');
-}
-
-// Create a server
-const server = http.createServer(requestListener);
-
-// Start the server listening on the configured host and port
-server.listen(config.server.port, config.server.host, () => {
-  log.info(`Server is running on http://${config.server.host}:${config.server.port}`);
-});
+// Load the web server
+const server = require('./lib/server');
 
 log.debug('Module Loaded');
