@@ -1,4 +1,20 @@
 {
+  "name": "node-web-smsd",
+  "description": "A web API and GUI for smsd using Node.js",
+  "keywords": ["api, sms, lte, gsm, mms, smsd, gammu, smstools, web"],
+  "license": "MIT",
+  "homepage": "https://github.com/Heroj04/node-web-smsd",
+  "bugs": "https://github.com/Heroj04/node-web-smsd/issues",
+  "repository": "github:Heroj04/node-web-smsd",
+  "author": {
+    "name": "Jack Footner",
+    "email": "jackrfootner@gmail.com",
+    "url": "https://github.com/Heroj04/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
