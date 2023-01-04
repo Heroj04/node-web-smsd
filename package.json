@@ -1,7 +1,9 @@
 {
   "name": "node-web-smsd",
   "description": "A web API and GUI for smsd using Node.js",
-  "keywords": ["api, sms, lte, gsm, mms, smsd, gammu, smstools, web"],
+  "keywords": [
+    "api, sms, lte, gsm, mms, smsd, gammu, smstools, web"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/Heroj04/node-web-smsd",
   "bugs": "https://github.com/Heroj04/node-web-smsd/issues",
@@ -22,6 +24,7 @@
   },
   "dependencies": {
     "args": "^5.0.3",
+    "express": "^4.18.2",
     "loglevel": "^1.8.1",
     "loglevel-plugin-prefix": "^0.8.4"
   }
